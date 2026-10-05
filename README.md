@@ -1,5 +1,5 @@
 # Portfolio 2.0 🏎️
-deployed on - https://portfolio-2-0-ijt5500ia-arnavwarale27-bots-projects.vercel.app
+deployed on - https://portfolio-2-0-three-chi.vercel.app/
 
 A premium, interactive, and high-performance F1-themed portfolio website. It features a cinematic F1 video intro sequence that transitions into a sleek developer portfolio with a scroll-linked 3D-effect race track.
 
