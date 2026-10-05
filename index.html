@@ -863,14 +863,14 @@
     #wins { background: transparent; }
     .achievements-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(5, 1fr);
       border: 1px solid var(--line);
       border-radius: 8px;
       overflow: hidden;
       margin-top: 8px;
     }
     .achievement {
-      padding: 36px 28px 40px;
+      padding: 36px 20px 40px;
       border-right: 1px solid var(--line);
       border-bottom: 1px solid transparent;
       background: var(--panel);
@@ -892,7 +892,7 @@
     .achievement:hover::before { transform: scaleX(1); }
     .achievement:last-child { border-right: 0; }
     .ach-num {
-      font: 700 italic 4.8rem / .85 var(--font-display);
+      font: 700 italic clamp(3.2rem, 3.8vw, 4.8rem) / .85 var(--font-display);
       color: #333;
       transition: color .3s;
       letter-spacing: .02em;
@@ -992,6 +992,21 @@
       text-transform: uppercase;
       letter-spacing: .01em;
       margin: 0 0 8px;
+    }
+    .moment-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+    }
+    .moment-header h3 { margin: 0; }
+    .moment-date {
+      font: 500 .72rem var(--font-tech);
+      color: var(--muted);
+      letter-spacing: .08em;
+      text-transform: uppercase;
     }
     .moment p { margin: 0; color: #aaaaaa; font-size: .88rem; line-height: 1.7; }
 
@@ -1234,6 +1249,10 @@
       .hero-inner { grid-template-columns: 1fr; }
       .race-visual { display: none; }
       .projects-grid { grid-template-columns: 1fr 1fr; }
+      .achievements-grid { grid-template-columns: 1fr 1fr; }
+      .achievement { border-bottom: 1px solid var(--line); }
+      .achievement:nth-child(2n) { border-right: 0; }
+      .achievement:last-child { grid-column: 1 / -1; border-bottom: 0; border-right: 0; }
       .paddock-grid { grid-template-columns: 1fr; gap: 48px; }
       .content-grid { grid-template-columns: 1fr; }
     }
@@ -1243,7 +1262,6 @@
       .hero { padding: 100px 0 60px; }
       .hero h1 { font-size: clamp(4.2rem, 14vw, 6.5rem); }
       .projects-grid { grid-template-columns: 1fr; }
-      .achievements-grid { grid-template-columns: 1fr 1fr; }
       .section-head { flex-direction: column; align-items: flex-start; gap: 16px; }
       .section-desc { max-width: 100%; }
       .skills-grid { grid-template-columns: 1fr; }
@@ -1252,6 +1270,8 @@
     }
     @media (max-width: 480px) {
       .achievements-grid { grid-template-columns: 1fr; }
+      .achievement { border-right: 0; border-bottom: 1px solid var(--line); }
+      .achievement:last-child { border-bottom: 0; grid-column: auto; }
       .contact-title { font-size: clamp(3.8rem, 16vw, 6rem); }
       .moment { grid-template-columns: 1fr; gap: 6px; }
       .stats-row { grid-template-columns: 1fr; }
@@ -1608,6 +1628,7 @@
           <span>AI Products</span><span class="dot">·</span>
           <span>Software Engineering</span><span class="dot">·</span>
           <span>Hackathons</span><span class="dot">·</span>
+          <span>Internshala Student Partner</span><span class="dot">·</span>
           <span>Community Building</span><span class="dot">·</span>
           <span>Computer Vision</span><span class="dot">·</span>
           <span>Continuous Learning</span><span class="dot">·</span>
@@ -1616,6 +1637,7 @@
           <span>AI Products</span><span class="dot">·</span>
           <span>Software Engineering</span><span class="dot">·</span>
           <span>Hackathons</span><span class="dot">·</span>
+          <span>Internshala Student Partner</span><span class="dot">·</span>
           <span>Community Building</span><span class="dot">·</span>
           <span>Computer Vision</span><span class="dot">·</span>
           <span>Continuous Learning</span><span class="dot">·</span>
@@ -1762,6 +1784,11 @@
         <h3 class="ach-title">India Innovates</h3>
         <p class="ach-desc">Selected for India Innovates 2026 at Bharat Mandapam, New Delhi — national recognition for innovation.</p>
       </article>
+      <article class="achievement">
+        <div class="ach-num" data-count="2026" data-prefix="">ISP</div>
+        <h3 class="ach-title">Internshala (ISP)</h3>
+        <p class="ach-desc">Selected as an Internshala Student Partner in 2026, helping students discover internships, training programs, and career opportunities.</p>
+      </article>
     </div>
   </div>
 </section>
@@ -1777,7 +1804,7 @@
           No worthwhile build is a solo lap. I bring <strong>technology, community, and curiosity</strong> together —
           then keep iterating until it's worth showing.
           Currently studying <em>Computer Engineering</em> at TSSMS PPVIT under SPPU,
-          while running Syntax Squad and contributing to AI/ML Infera.
+          while running Syntax Squad, serving as an Internshala Student Partner, and contributing to AI/ML Infera.
         </p>
         <div class="stats-row">
           <div class="stat-box">
@@ -1805,6 +1832,16 @@
           <div>
             <h3>Founder, Syntax Squad</h3>
             <p>Building a student-led space for builders, collaborators, and people who want to turn ideas into work worth showing.</p>
+          </div>
+        </article>
+        <article class="moment">
+          <div class="moment-badge">Outreach</div>
+          <div>
+            <div class="moment-header">
+              <h3>Student Partner — Internshala</h3>
+              <span class="moment-date">Sep 2026 – Present</span>
+            </div>
+            <p>Representing Internshala within the student community — leading campus outreach, promoting internships and technical training programs, and connecting peers with career development opportunities.</p>
           </div>
         </article>
         <article class="moment">
